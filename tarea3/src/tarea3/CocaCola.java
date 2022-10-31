@@ -1,5 +1,5 @@
 
-package tarea2;
+package tarea3;
 
 
 class CocaCola extends Bebida{

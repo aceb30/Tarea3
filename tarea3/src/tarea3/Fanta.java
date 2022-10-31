@@ -1,5 +1,5 @@
 
-package tarea2;
+package tarea3;
 
 class Fanta extends Bebida{
     public Fanta(int serie){
