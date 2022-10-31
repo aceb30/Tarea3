@@ -3,7 +3,7 @@ package tarea2;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
-public class Tarea2 {
+public class Tarea3 {
 
     // TODO: Handle these
     public static void main(String[] args){
