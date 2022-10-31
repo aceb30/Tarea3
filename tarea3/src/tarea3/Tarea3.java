@@ -6,7 +6,7 @@ import java.util.logging.Logger;
 public class Tarea3 {
 
     // TODO: Handle these
-    public static void main(String[] args){
+    public static void main(String[] args) throws NoHayBebidaException, PagoInsuficienteException, PagoIncorrectoException{
 
         Moneda m1 = new Moneda100();
         Moneda m2 = new Moneda500();
@@ -25,7 +25,10 @@ public class Tarea3 {
         } catch (Exception e) {
             System.out.println(e);
         }
-
+        
+        Ventana v = new Ventana();
+        PanelPrincipal p = new PanelPrincipal();
+        v.add(p);
     }
 
 }
