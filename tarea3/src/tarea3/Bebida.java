@@ -1,11 +1,15 @@
 package tarea3;
-
-abstract public class Bebida {
+import java.awt.*;
+import javax.swing.*;
+abstract public class Bebida extends JPanel{
 
     private int serie;
-
-    public Bebida(int s) {
+    private int x;
+    private int y;
+    public Bebida(int s, int posx, int posy) {
         serie = s;
+        x = posx;
+        y = posy;
     }
 
     public int getSerie() {
@@ -15,4 +19,10 @@ abstract public class Bebida {
     public String beber() {
         return "sabor: ";
     }
+    public void paintComponent(Graphics g) {
+      super.paintComponent(g);
+      g.setColor(Color.BLACK);
+      g.fillRect(x, y, 200, 200);
+      
+   }
 }

@@ -13,11 +13,11 @@ public class Tarea3 {
         Moneda m3 = new Moneda1000();
         Moneda n = null;
 
-        Expendedor expendedor = new Expendedor(1, 800);
+        Expendedor expendedor = new Expendedor(1, 800, 10, 10);
 
         Comprador pedro;
         try {
-            pedro = new Comprador(m3, 2, expendedor);
+            pedro = new Comprador(m3, 2, expendedor, 10, 10);
 
             System.out.println(pedro.getVuelto());
             System.out.println(pedro.getSabor());
