@@ -40,4 +40,6 @@ public class Comprador extends JPanel {
       g.setColor(Color.YELLOW);
       g.fillOval(x, y, 200, 200);
    }
+    
+    
 }

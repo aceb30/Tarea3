@@ -10,8 +10,10 @@ class CocaCola extends Bebida{
     public String beber(){
         return super.beber() + "cocacola";
     }
-    @Override
+ 
     public void paintComponent(Graphics g){
         super.paintComponent(g);
+         g.setColor(Color.BLACK);
+         g.fillRect(super.getX(), super.getY(), 200, 200);
     }
 }

@@ -29,6 +29,10 @@ public class Tarea3 {
         Ventana v = new Ventana();
         PanelPrincipal p = new PanelPrincipal();
         v.add(p);
+        
+        Sprite g = new Sprite(1, 100, 100);
+
     }
+    
 
 }

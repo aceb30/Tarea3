@@ -15,7 +15,12 @@ abstract public class Bebida extends JPanel{
     public int getSerie() {
         return serie;
     }
-
+    public int getX(){
+        return x;
+    }
+    public int getY(){
+        return y;
+    }
     public String beber() {
         return "sabor: ";
     }
