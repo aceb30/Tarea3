@@ -2,7 +2,8 @@ package tarea3;
 import java.awt.*;
 import javax.swing.*;
 public class Expendedor extends JPanel {
-
+    
+    private DepositoExpBebida salida;
     private Deposito coca;
     private Deposito sprite;
     private Deposito fanta;
@@ -14,6 +15,7 @@ public class Expendedor extends JPanel {
     private int y;
 
     public Expendedor(int cant, int pre, int posx, int posy) {
+        salida = new DepositoExpBebida();
         x = posx;
         y = posy;
         vuelto = 0;
@@ -46,7 +48,7 @@ public class Expendedor extends JPanel {
         return b.beber();
     }
 
-    public Bebida comprarBebida(Moneda m, int tipo) throws NoHayBebidaException, PagoInsuficienteException, PagoIncorrectoException {
+    public void comprarBebida(Moneda m, int tipo) throws NoHayBebidaException, PagoInsuficienteException, PagoIncorrectoException {
 
         b = null;
 
@@ -80,15 +82,18 @@ public class Expendedor extends JPanel {
                     AddVuelto(null);
                 }
             }
-            return b;
+            salida.add(b);
         } else {
             AddVuelto(m);
             throw new NoHayBebidaException("No hay bebida");
         }
     }
+    public Bebida getBebida(){
+        return salida.GetBebida();
+    }
      public void paintComponent(Graphics g) {
       super.paintComponent(g);
-      // draw Eyes
+    
       g.setColor(Color.blue);
       g.fillRect(800, 55, 600, 25);
       g.fillRect(800, 55, 25, 600);

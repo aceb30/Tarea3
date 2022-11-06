@@ -13,7 +13,6 @@ class CocaCola extends Bebida{
  
     public void paintComponent(Graphics g){
         super.paintComponent(g);
-         g.setColor(Color.BLACK);
-         g.fillRect(super.getX(), super.getY(), 200, 200);
+        
     }
 }

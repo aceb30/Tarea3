@@ -9,8 +9,7 @@ public class Ventana extends JFrame {
         this.setLayout(new BorderLayout());
         this.setTitle("Tarea 3");
         this.setSize(1500, 800);
-        this.setVisible(true);
         this.setDefaultCloseOperation(EXIT_ON_CLOSE);
-        
+        this.setVisible(true);
     }
 }
