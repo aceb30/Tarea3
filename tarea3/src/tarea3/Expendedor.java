@@ -89,15 +89,26 @@ public class Expendedor extends JPanel {
      public void paintComponent(Graphics g) {
       super.paintComponent(g);
       // draw Eyes
-      g.setColor(Color.BLACK);
-      g.fillOval(x+45, y+55, 30, 30);
-      g.fillOval(135, 65, 30, 30);
-      // draw Mouth
-      g.fillOval(50, 110, 120, 60);
-      // adding smile
-      g.setColor(Color.YELLOW);
-      g.fillRect(50, 110, 120, 30);
-      g.fillOval(50, 120, 120, 40);
-      
+      g.setColor(Color.blue);
+      g.fillRect(800, 55, 600, 25);
+      g.fillRect(800, 55, 25, 600);
+      g.fillRect(800, 600, 600, 150);
+      g.fillRect(1250, 55, 150, 600);
+      g.setColor(Color.gray);
+      //Dimensiones caja principal 425*520
+      g.fillRect(825, 80, 425, 520);
+      //Dimensiones caja salida de botellas
+      g.setColor(Color.black);
+      g.fillRect(825, 625, 425, 100);
+      //Dimensiones selector
+      g.setColor(Color.orange);
+      g.fillRect(1260, 100, 130, 200);
+      //Dimemsiones cosa de monedas
+      g.setColor(Color.red);
+      g.fillRect(1260, 350, 130, 200);
+      //Separadores de filas
+      g.setColor(Color.black);
+      g.fillRect(825, 250, 425, 10);
+      g.fillRect(825, 440, 425, 10);
    }
 }

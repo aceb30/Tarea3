@@ -2,12 +2,18 @@ package tarea3;
 
 import java.util.logging.Level;
 import java.util.logging.Logger;
+import java.awt.*;
+import javax.swing.*;
 
 public class Tarea3 {
 
     // TODO: Handle these
     public static void main(String[] args) throws NoHayBebidaException, PagoInsuficienteException, PagoIncorrectoException{
 
+        Ventana v = new Ventana();
+        PanelPrincipal p = new PanelPrincipal();
+        v.add(p);
+        
         Moneda m1 = new Moneda100();
         Moneda m2 = new Moneda500();
         Moneda m3 = new Moneda1000();
@@ -26,11 +32,12 @@ public class Tarea3 {
             System.out.println(e);
         }
         
-        Ventana v = new Ventana();
-        PanelPrincipal p = new PanelPrincipal();
-        v.add(p);
         
-        Sprite g = new Sprite(1, 100, 100);
+        
+       
+        
+        
+        
 
     }
     
