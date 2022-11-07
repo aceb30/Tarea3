@@ -1,10 +1,12 @@
 
 package tarea3;
+import java.awt.*;
+import javax.swing.*;
 
 import java.util.ArrayList;
 
 
-public class Deposito {
+public class Deposito extends JPanel {
     
     private ArrayList<Bebida> al;
     

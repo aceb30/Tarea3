@@ -1,8 +1,9 @@
 package tarea3;
-
+import java.awt.*;
+import javax.swing.*;
 import java.util.ArrayList;
 
-public class DepositoVuelto {
+public class DepositoVuelto extends JPanel {
 
     private ArrayList<Moneda> al;
 
@@ -27,7 +28,7 @@ public class DepositoVuelto {
         return al.remove(0);
     }
 
-    public int getSize() {
+    public int getSizea() {
         return al.size();
     }
 }

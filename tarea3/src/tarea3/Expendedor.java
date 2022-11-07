@@ -2,7 +2,7 @@ package tarea3;
 import java.awt.*;
 import javax.swing.*;
 public class Expendedor extends JPanel {
-    
+    private DepositoMonedas monedas;
     private DepositoExpBebida salida;
     private Deposito coca;
     private Deposito sprite;
@@ -23,6 +23,7 @@ public class Expendedor extends JPanel {
         sprite = new Deposito();
         fanta = new Deposito();
         depvuel = new DepositoVuelto();
+        monedas = new DepositoMonedas();
         for (int i = 0; i < cant; ++i) {
             //Por ahora les tire posiciones xy random pero se deberá modificar.
             sprite.addBebida(new Sprite(i + 200, 100, 100));
@@ -36,7 +37,7 @@ public class Expendedor extends JPanel {
     }
 
     public int getSizea() {
-        return depvuel.getSize();
+        return depvuel.getSizea();
     }
 
     public void AddVuelto(Moneda m) {
@@ -114,5 +115,7 @@ public class Expendedor extends JPanel {
       g.setColor(Color.black);
       g.fillRect(825, 250, 425, 10);
       g.fillRect(825, 440, 425, 10);
+      
+     
    }
 }
