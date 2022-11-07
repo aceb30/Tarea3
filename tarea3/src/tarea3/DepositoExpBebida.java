@@ -6,21 +6,17 @@ import javax.swing.*;
 public class DepositoExpBebida extends JPanel {
     private Bebida bebida;
     private int cant;
-    public DepositoExpBebida(){
-        cant = 0;
+    public DepositoExpBebida(Bebida b){
+        cant = 1;
+        bebida = b;
     }
-    public void addBebida(Bebida b){
-        if(cant == 0){
-            bebida = b;
-            cant = 1;
-        }
-    }
-    public Bebida GetBebida(){
+  
+    public Bebida GetBebida() throws NoHayBebidaException{
         if(cant == 1){
             cant = 0;
             return bebida;
         }
-        return null;
+        throw new NoHayBebidaException("No hay bebida");
     }
     
 }

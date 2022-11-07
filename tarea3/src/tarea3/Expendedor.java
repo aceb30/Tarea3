@@ -15,7 +15,6 @@ public class Expendedor extends JPanel {
     private int y;
 
     public Expendedor(int cant, int pre, int posx, int posy) {
-        salida = new DepositoExpBebida();
         x = posx;
         y = posy;
         vuelto = 0;
@@ -82,13 +81,13 @@ public class Expendedor extends JPanel {
                     AddVuelto(null);
                 }
             }
-            salida.add(b);
+            salida = new DepositoExpBebida(b);
         } else {
             AddVuelto(m);
             throw new NoHayBebidaException("No hay bebida");
         }
     }
-    public Bebida getBebida(){
+    public Bebida getBebida() throws NoHayBebidaException{
         return salida.GetBebida();
     }
      public void paintComponent(Graphics g) {

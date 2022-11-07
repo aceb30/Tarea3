@@ -12,8 +12,8 @@ public class Comprador extends JPanel {
         
         x = posx; 
         y = posy;
-        Bebida b = exp.comprarBebida(m, cualBebida);
-
+        exp.comprarBebida(m, cualBebida);
+        Bebida b = exp.getBebida();
         vuelto = 0;
         
         while (true) {

@@ -18,10 +18,10 @@ public class PanelPrincipal extends JPanel {
     public void paintComponent(Graphics g) {
       super.paintComponent(g);
       
-      //Draws yellow circle
+      
       com.paintComponent(g);
       
-      //Draws happy expression
+      
       exp.paintComponent(g);
       
       
