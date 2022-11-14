@@ -1,7 +1,10 @@
 package tarea3;
+
 import java.awt.*;
 import javax.swing.*;
+
 public class Expendedor extends JPanel {
+
     private DepositoMonedas monedas;
     private DepositoExpBebida salida;
     private Deposito coca;
@@ -15,6 +18,7 @@ public class Expendedor extends JPanel {
     private int y;
 
     public Expendedor(int cant, int pre, int posx, int posy) {
+        this.setPreferredSize(new Dimension(750, 800));
         x = posx;
         y = posy;
         vuelto = 0;
@@ -27,8 +31,8 @@ public class Expendedor extends JPanel {
         for (int i = 0; i < cant; ++i) {
             //Por ahora les tire posiciones xy random pero se deberá modificar.
             sprite.addBebida(new Sprite(i + 200, 100, 100));
-            coca.addBebida(new CocaCola(i + 100,200,200));
-            fanta.addBebida(new Fanta(i + 100,300,300));
+            coca.addBebida(new CocaCola(i + 100, 200, 200));
+            fanta.addBebida(new Fanta(i + 100, 300, 300));
         }
     }
 
@@ -43,8 +47,8 @@ public class Expendedor extends JPanel {
     public void AddVuelto(Moneda m) {
         depvuel.addMoneda(m);
     }
-    
-    public String getSabor(){
+
+    public String getSabor() {
         return b.beber();
     }
 
@@ -88,34 +92,36 @@ public class Expendedor extends JPanel {
             throw new NoHayBebidaException("No hay bebida");
         }
     }
-    public Bebida getBebida() throws NoHayBebidaException{
+
+    public Bebida getBebida() throws NoHayBebidaException {
         return salida.GetBebida();
     }
-     public void paintComponent(Graphics g) {
-      super.paintComponent(g);
-    
-      g.setColor(Color.blue);
-      g.fillRect(800, 55, 600, 25);
-      g.fillRect(800, 55, 25, 600);
-      g.fillRect(800, 600, 600, 150);
-      g.fillRect(1250, 55, 150, 600);
-      g.setColor(Color.gray);
-      //Dimensiones caja principal 425*520
-      g.fillRect(825, 80, 425, 520);
-      //Dimensiones caja salida de botellas
-      g.setColor(Color.black);
-      g.fillRect(825, 625, 425, 100);
-      //Dimensiones selector
-      g.setColor(Color.orange);
-      g.fillRect(1260, 100, 130, 200);
-      //Dimemsiones cosa de monedas
-      g.setColor(Color.red);
-      g.fillRect(1260, 350, 130, 200);
-      //Separadores de filas
-      g.setColor(Color.black);
-      g.fillRect(825, 250, 425, 10);
-      g.fillRect(825, 440, 425, 10);
-      
-     
-   }
+
+    @Override
+    public void paint(Graphics g) {
+        super.paint(g);
+
+        g.setColor(Color.blue);
+        g.fillRect(400, 55, 600, 25);
+        g.fillRect(400, 55, 25, 600);
+        g.fillRect(400, 600, 600, 150);
+        g.fillRect(1250, 55, 150, 600);
+        g.setColor(Color.gray);
+        //Dimensiones caja principal 425*520
+        g.fillRect(825, 80, 425, 520);
+        //Dimensiones caja salida de botellas
+        g.setColor(Color.black);
+        g.fillRect(825, 625, 425, 100);
+        //Dimensiones selector
+        g.setColor(Color.orange);
+        g.fillRect(1260, 100, 130, 200);
+        //Dimemsiones cosa de monedas
+        g.setColor(Color.red);
+        g.fillRect(1260, 350, 130, 200);
+        //Separadores de filas
+        g.setColor(Color.black);
+        g.fillRect(825, 250, 425, 10);
+        g.fillRect(825, 440, 425, 10);
+
+    }
 }
