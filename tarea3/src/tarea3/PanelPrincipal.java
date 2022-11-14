@@ -20,8 +20,8 @@ public class PanelPrincipal extends JPanel {
         exp = new Expendedor(10, 1000, 10, 10);
         com = new Comprador(m3, 2, exp, 10, 10);
 
-        this.add(exp, BorderLayout.EAST);
-        //this.add(com, BorderLayout.WEST);
+        this.add(exp);
+        this.add(com);
     }
 
     @Override
