@@ -31,6 +31,7 @@ public class Expendedor extends JPanel {
         fanta = new Deposito();
         depvuel = new DepositoVuelto();
         monedas = new DepositoMonedas();
+        salida = new DepositoExpBebida(null);
         for (int i = 0; i < cant; ++i) {
             //Por ahora les tire posiciones xy random pero se deberá modificar.
             sprite.addBebida(new Sprite(i + 200, 100, 100));
@@ -39,7 +40,13 @@ public class Expendedor extends JPanel {
         }
         
         this.add(depvuel,BorderLayout.NORTH);
-        this.add(monedas,BorderLayout.NORTH);          
+        
+        this.add(monedas,BorderLayout.NORTH);
+                
+        
+        this.add(salida);
+        
+        
         
         /*ImageIcon coin = new ImageIcon("dispenser.png");        
         JLabel c100Label = new JLabel();
@@ -125,19 +132,19 @@ public class Expendedor extends JPanel {
         g.fillRect(480, 300, 120, 600); // rec Derecho
         g.setColor(Color.gray);
         //Dimensiones caja principal 425*520
-        g.fillRect(225, 300, 260, 530);
+        g.fillRect(225, 325, 260, 530);
         //Dimensiones caja salida de botellas
         g.setColor(Color.black);
-        g.fillRect(825, 625, 425, 100);
+        g.fillRect(225, 875, 260, 50);
         //Dimensiones selector
         g.setColor(Color.orange);
-        g.fillRect(1260, 100, 130, 200);
+        g.fillRect(100, 100, 130, 200);
         //Dimemsiones cosa de monedas
         g.setColor(Color.red);
         g.fillRect(1260, 350, 130, 200);
         //Separadores de filas
         g.setColor(Color.black);
-        g.fillRect(825, 250, 425, 10);
+        g.fillRect(225, 250, 425, 10);
         g.fillRect(825, 440, 425, 10);
 
     }
