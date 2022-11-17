@@ -9,12 +9,12 @@ public class Comprador extends JPanel {
     private String sabor;
     private int vuelto = 0;
     private int x;
-    private int y;
+    private int y;        
 
-    public Comprador(Moneda m, int cualBebida, Expendedor exp, int posx, int posy) throws NoHayBebidaException, PagoInsuficienteException, PagoIncorrectoException {
-this.setPreferredSize(new Dimension(750, 800));
-        x = posx;
-        y = posy;
+    public Comprador(Moneda m, int cualBebida, Expendedor exp) throws NoHayBebidaException, PagoInsuficienteException, PagoIncorrectoException {
+        
+        //this.setPreferredSize(new Dimension(750, 800));
+        
         exp.comprarBebida(m, cualBebida);
         Bebida b = exp.getBebida();
         vuelto = 0;
@@ -28,6 +28,17 @@ this.setPreferredSize(new Dimension(750, 800));
             }
         }
         sabor = b.beber();
+        
+        ImageIcon coin = new ImageIcon("stickman.png");        
+        JLabel c100Label = new JLabel();
+        c100Label.setVisible(true);                
+        c100Label.setText("Hombrefalo");
+        c100Label.setForeground(Color.black);
+        c100Label.setIcon(coin);        
+        c100Label.setLocation(0,0);
+        c100Label.setSize(40,40);
+        
+        this.add(c100Label);
     }
 
     public int getVuelto() {
@@ -42,7 +53,7 @@ this.setPreferredSize(new Dimension(750, 800));
     public void paint(Graphics g) {
         super.paint(g);
         
-        g.setColor(Color.YELLOW);
+        /*g.setColor(Color.YELLOW);
         g.fillOval(10, 10, 200, 200);
 
         // draw Eyes
@@ -56,7 +67,8 @@ this.setPreferredSize(new Dimension(750, 800));
         // adding smile
         g.setColor(Color.YELLOW);
         g.fillRect(50, 110, 120, 30);
-        g.fillOval(50, 120, 120, 40);
-    }
+        g.fillOval(50, 120, 120, 40);*/
+                             
+    }    
 
 }

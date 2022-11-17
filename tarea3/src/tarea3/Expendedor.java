@@ -34,6 +34,17 @@ public class Expendedor extends JPanel {
             coca.addBebida(new CocaCola(i + 100, 200, 200));
             fanta.addBebida(new Fanta(i + 100, 300, 300));
         }
+        
+        ImageIcon coin = new ImageIcon("dispenser.png");        
+        JLabel c100Label = new JLabel();
+        c100Label.setVisible(true);                
+        c100Label.setText("Hombrefalo");
+        c100Label.setForeground(Color.black);
+        c100Label.setIcon(coin);        
+        c100Label.setLocation(0,0);
+        c100Label.setSize(100,100);
+        
+        this.add(c100Label);
     }
 
     public Moneda getVuelto() {
@@ -101,7 +112,7 @@ public class Expendedor extends JPanel {
     public void paint(Graphics g) {
         super.paint(g);
 
-        g.setColor(Color.blue);
+        /*g.setColor(Color.blue);
         g.fillRect(400, 55, 600, 25);
         g.fillRect(400, 55, 25, 600);
         g.fillRect(400, 600, 600, 150);
@@ -121,7 +132,7 @@ public class Expendedor extends JPanel {
         //Separadores de filas
         g.setColor(Color.black);
         g.fillRect(825, 250, 425, 10);
-        g.fillRect(825, 440, 425, 10);
+        g.fillRect(825, 440, 425, 10);*/
 
     }
 }
