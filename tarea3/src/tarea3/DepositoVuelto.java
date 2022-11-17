@@ -9,6 +9,10 @@ public class DepositoVuelto extends JPanel {
 
     public DepositoVuelto() {
         al = new ArrayList<Moneda>();
+        
+    this.setPreferredSize(new Dimension(750, 100));
+    this.setBackground(Color.GREEN);
+    
     }
 
     public void addMoneda(Moneda m) {

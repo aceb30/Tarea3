@@ -11,7 +11,7 @@ public class Deposito extends JPanel {
     private ArrayList<Bebida> al;
     
     public Deposito(){
-        al = new ArrayList<Bebida>();
+        al = new ArrayList<Bebida>();        
     }
     
     public void addBebida(Bebida b){

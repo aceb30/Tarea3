@@ -13,7 +13,7 @@ public class Comprador extends JPanel {
 
     public Comprador(Moneda m, int cualBebida, Expendedor exp) throws NoHayBebidaException, PagoInsuficienteException, PagoIncorrectoException {
         
-        //this.setPreferredSize(new Dimension(750, 800));
+        this.setPreferredSize(new Dimension(750, 600));
         
         exp.comprarBebida(m, cualBebida);
         Bebida b = exp.getBebida();
@@ -29,7 +29,9 @@ public class Comprador extends JPanel {
         }
         sabor = b.beber();
         
-        ImageIcon coin = new ImageIcon("stickman.png");        
+        this.setBackground(Color.MAGENTA);
+        
+        /*ImageIcon coin = new ImageIcon("stickman.png");        
         JLabel c100Label = new JLabel();
         c100Label.setVisible(true);                
         c100Label.setText("Hombrefalo");
@@ -38,7 +40,9 @@ public class Comprador extends JPanel {
         c100Label.setLocation(0,0);
         c100Label.setSize(40,40);
         
-        this.add(c100Label);
+        this.add(c100Label);*/
+        
+        
     }
 
     public int getVuelto() {

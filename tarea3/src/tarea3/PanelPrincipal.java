@@ -9,8 +9,10 @@ public class PanelPrincipal extends JPanel {
     private Expendedor exp;
 
     public PanelPrincipal() throws NoHayBebidaException, PagoInsuficienteException, PagoIncorrectoException {
+        
         super(new BorderLayout());
-        this.setBackground(Color.black);
+        
+        this.setBackground(Color.GREEN);
 
         Moneda m1 = new Moneda100();
         Moneda m2 = new Moneda500();
