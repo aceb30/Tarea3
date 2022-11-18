@@ -18,7 +18,7 @@ public class DepositoMonedas extends JPanel {
         vueltoLabel.setVisible(true);
         vueltoLabel.setForeground(Color.black);        
         this.add(vueltoLabel);
-    
+                   
      }
      public void addMoneda(Moneda m) {
       if (m != null) {

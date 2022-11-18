@@ -8,19 +8,22 @@ public class DepositoVuelto extends JPanel {
     private ArrayList<Moneda> al;
 
     public DepositoVuelto() {
+    
         al = new ArrayList<Moneda>();
         
-    this.setPreferredSize(new Dimension(750, 100));
-    this.setBackground(Color.GREEN);
+        this.setPreferredSize(new Dimension(750, 100));
+        this.setBackground(Color.GREEN);                      
     
     }
 
     public void addMoneda(Moneda m) {
         if (m != null) {
             al.add(m);
+            this.add(m,BorderLayout.EAST);
+            
         } else {
             al.add(new Moneda100());
-        }
+        }        
 
     }
 

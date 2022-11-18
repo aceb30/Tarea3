@@ -26,18 +26,13 @@ public class Tarea3 {
         v.setVisible(true);
         
         
-        Moneda m1 = new Moneda100();
+        /*Moneda m1 = new Moneda100();
         Moneda m2 = new Moneda500();
         Moneda m3 = new Moneda1000();
-        Moneda n = null;
-                
-        Expendedor exp = new Expendedor(10, 1000, 10, 10);
-        Comprador com = new Comprador(m3, 2, exp);
-        
-        
-
+        Moneda n = null;                                                
         
         Expendedor expendedor = new Expendedor(1, 800, 10, 10);
+        expendedor.AddVuelto(m1);
 
         Comprador pedro;
         try {
@@ -50,7 +45,7 @@ public class Tarea3 {
         } catch (Exception e) {
             System.out.println(e);
         }
-
+        */
     }
 
 }

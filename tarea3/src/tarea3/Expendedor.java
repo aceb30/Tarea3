@@ -20,7 +20,8 @@ public class Expendedor extends JPanel {
     public Expendedor(int cant, int pre, int posx, int posy) {
         
         this.setPreferredSize(new Dimension(750, 600));
-        this.setBackground(Color.BLUE);        
+        this.setBackground(Color.BLUE);     
+        //this.setLocale(null);
         
         x = posx;
         y = posy;
@@ -42,12 +43,9 @@ public class Expendedor extends JPanel {
         this.add(depvuel,BorderLayout.NORTH);
         
         this.add(monedas,BorderLayout.NORTH);
-                
-        
+                        
         this.add(salida);
-        
-        
-        
+                
         /*ImageIcon coin = new ImageIcon("dispenser.png");        
         JLabel c100Label = new JLabel();
         c100Label.setVisible(true);                
@@ -122,7 +120,9 @@ public class Expendedor extends JPanel {
     }
 
     @Override
+    
     public void paint(Graphics g) {
+        
         super.paint(g);
         
         g.setColor(Color.cyan);
@@ -142,8 +142,7 @@ public class Expendedor extends JPanel {
         //Dimensiones salida de monedas
         g.setColor(Color.yellow);
         g.fillRect(525, 700, 30, 30);
-        
-                
+                        
         //Dimensiones selector
         g.setColor(Color.orange);
         g.fillRect(500, 350, 30, 30);       

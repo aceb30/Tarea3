@@ -1,9 +1,13 @@
 package tarea3;
 
-abstract public class Moneda {
+import java.awt.*;
+import javax.swing.*;
+
+abstract public class Moneda extends JPanel{
 
     public Moneda() {
-
+        this.setPreferredSize(new Dimension(50, 50));
+        ImageIcon coin;
     }
 
     public String getSerie() {

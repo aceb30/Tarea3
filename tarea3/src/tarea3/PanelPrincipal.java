@@ -11,8 +11,9 @@ public class PanelPrincipal extends JPanel {
     public PanelPrincipal() throws NoHayBebidaException, PagoInsuficienteException, PagoIncorrectoException {
         
         super(new BorderLayout());
+        this.setLocale(null);
         
-        this.setBackground(Color.GREEN);
+        this.setBackground(Color.WHITE);
 
         Moneda m1 = new Moneda100();
         Moneda m2 = new Moneda500();
@@ -23,7 +24,8 @@ public class PanelPrincipal extends JPanel {
         com = new Comprador(m3, 2, exp);
 
         this.add(exp,BorderLayout.EAST);
-        this.add(com,BorderLayout.WEST);
+        this.add(com);
+        
     }
 
     @Override
