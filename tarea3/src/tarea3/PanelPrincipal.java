@@ -13,13 +13,17 @@ public class PanelPrincipal extends JPanel implements ActionListener {
     private Expendedor exp;
     
     private JButton botonBebida = new JButton();
+    private JButton botonMoneda100 = new JButton();
+    private JButton botonMoneda500 = new JButton();
+    private JButton botonMoneda1000 = new JButton();
+    private JButton botonMoneda1500 = new JButton();
     
     public PanelPrincipal() throws NoHayBebidaException, PagoInsuficienteException, PagoIncorrectoException {
         
         super(new BorderLayout());
         this.setLocale(null);
         
-        botonBebida.setBounds(10, 10, 100, 50);
+        botonBebida.setBounds(0, 100, 100, 30);
         botonBebida.addActionListener(this);
         botonBebida.setText("Bebida");
         botonBebida.setFocusable(false);
@@ -59,17 +63,13 @@ public class PanelPrincipal extends JPanel implements ActionListener {
         exp.AddVuelto(m12);
         exp.AddVuelto(m13);
         exp.AddVuelto(m14);
-        com = new Comprador(m90, 2, exp);      
-        
-        //botonBebida.setMaximumSize(new Dimension(40, 40));
-        this.add(botonBebida);
+        com = new Comprador(m90, 2, exp);              
         
         //com.setBounds(0, 0, 300, 200);
-        this.add(exp,BorderLayout.EAST);
-        this.add(com,BorderLayout.WEST);
-        //this.add(com);
-        
-        
+        com.setBounds(0, 0, 750, 1000);
+        exp.setBounds(750, 0, 750, 1000);
+        this.add(com);
+        this.add(exp,BorderLayout.EAST);                                                 
         
         this.revalidate();
         this.repaint();

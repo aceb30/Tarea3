@@ -20,8 +20,9 @@ public class Expendedor extends JPanel {
 
     public Expendedor(int cant, int pre, int posx, int posy) {
         
-        this.setPreferredSize(new Dimension(750, 600));
-        this.setBackground(Color.BLUE);     
+        super(null);
+        this.setPreferredSize(new Dimension(750, 1000));
+        //this.setBackground(Color.BLUE);     
         this.setLocale(null);
         
         x = posx;
@@ -43,48 +44,16 @@ public class Expendedor extends JPanel {
             //this.add(coca);
             //this.add(sprite);
             //this.add(fanta);
-        }        
-        this.add(depvuel,BorderLayout.NORTH);
+        }                                               
         
-        JPanel panel2 = new JPanel();
-        panel2.setPreferredSize(new Dimension(750, 120));
-        panel2.setBackground(Color.YELLOW);
-        panel2.setVisible(true);
-        this.add(panel2,BorderLayout.NORTH);
+        monedas.setBounds(800, 100, 30, 40);
+        this.add(monedas);
         
-        JPanel panel3 = new JPanel();
-        panel3.setPreferredSize(new Dimension(235, 120));
-        panel3.setBackground(Color.ORANGE);
-        panel3.setVisible(true);
-        this.add(panel3,BorderLayout.WEST);
+        salida.setBounds(600,400,30,40);
+        this.add(salida);
         
-        JPanel panel4 = new JPanel();
-        panel4.setPreferredSize(new Dimension(260, 120));
-        panel4.setBackground(Color.BLACK);
-        panel4.setVisible(true);
-        this.add(panel4,BorderLayout.EAST);
-        
-        JPanel panel5 = new JPanel();
-        panel5.setPreferredSize(new Dimension(260, 120));
-        panel5.setBackground(Color.cyan);
-        panel5.setVisible(true);
-        this.add(panel5,BorderLayout.NORTH);
-        
-        /*JPanel panel6 = new JPanel();
-        panel6.setPreferredSize(new Dimension(260, 120));
-        panel6.setBackground(Color.BLACK);
-        panel6.setVisible(true);
-        this.add(panel6,BorderLayout.NORTH);*/
-        
-        JPanel panel7 = new JPanel();
-        panel7.setPreferredSize(new Dimension(235, 120));
-        panel7.setBackground(Color.WHITE);
-        panel7.setVisible(true);
-        this.add(panel5,BorderLayout.EAST);
-        
-        this.add(monedas,BorderLayout.EAST);
-                        
-        this.add(salida,BorderLayout.EAST);
+        depvuel.setBounds(0,0,750,200);
+        this.add(depvuel);
         
         
     }
@@ -189,9 +158,9 @@ public class Expendedor extends JPanel {
         g.fillRect(225,500 , 260, 10);
         g.fillRect(225,675 , 260, 10);
         
-        coca.paintComponent(g);
-        sprite.paintComponent(g);
-        fanta.paintComponent(g);*/
+        //coca.paintComponent(g);
+        //sprite.paintComponent(g);
+        //fanta.paintComponent(g);*/
 
     }
 }
