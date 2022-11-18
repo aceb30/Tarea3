@@ -10,8 +10,8 @@ public class DepositoMonedas extends JPanel {
      public DepositoMonedas(){
          al = new ArrayList<Moneda>();
          
-        this.setPreferredSize(new Dimension(50, 50));        
-        this.setBackground(Color.YELLOW);
+        this.setPreferredSize(new Dimension(50, 60));        
+        this.setBackground(Color.YELLOW);        
         
         JLabel vueltoLabel = new JLabel();
         vueltoLabel.setText("Vuelto");

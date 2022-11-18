@@ -11,13 +11,14 @@ public class DepositoVuelto extends JPanel {
     
         al = new ArrayList<Moneda>();
         
-        this.setPreferredSize(new Dimension(750, 100));
-        this.setBackground(Color.GREEN);                      
+        this.setPreferredSize(new Dimension(750, 200));
+        this.setBackground(Color.BLACK);                      
     
     }
 
     public void addMoneda(Moneda m) {
         if (m != null) {
+            
             al.add(m);
             this.add(m,BorderLayout.EAST);
             

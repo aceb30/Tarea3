@@ -30,19 +30,19 @@ public class Comprador extends JPanel {
         sabor = b.beber();
         
         this.setBackground(Color.MAGENTA);
-        this.setLocale(null);
+        //this.setLocale(null);
         
         JPanel panel = new JPanel();
         panel.setBounds(30, 30, 400, 300);
         panel.setBackground(Color.red);
         
         ImageIcon stickman = new ImageIcon("stickman.png");        
-        JLabel compradorLabel = new JLabel();        
+        JLabel compradorLabel = new JLabel();  
         compradorLabel.setBackground(Color.red);
-        compradorLabel.setVisible(true);                
+        compradorLabel.setVisible(true);
         compradorLabel.setText("Comprador");
         compradorLabel.setForeground(Color.black);
-        compradorLabel.setIcon(stickman);     
+        compradorLabel.setIcon(stickman);
         compradorLabel.setBounds(100,100,100,100);
         
         this.add(compradorLabel);

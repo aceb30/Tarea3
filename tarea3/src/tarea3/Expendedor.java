@@ -44,18 +44,7 @@ public class Expendedor extends JPanel {
         
         this.add(monedas,BorderLayout.NORTH);
                         
-        this.add(salida);
-                
-        /*ImageIcon coin = new ImageIcon("dispenser.png");        
-        JLabel c100Label = new JLabel();
-        c100Label.setVisible(true);                
-        c100Label.setText("Hombrefalo");
-        c100Label.setForeground(Color.black);
-        c100Label.setIcon(coin);        
-        c100Label.setLocation(0,0);
-        c100Label.setSize(100,100);
-        
-        this.add(c100Label);*/        
+        this.add(salida);                           
     }
 
     public Moneda getVuelto() {
@@ -82,6 +71,7 @@ public class Expendedor extends JPanel {
             throw new PagoIncorrectoException("Pago incorrecto");
         }
         int dinero = m.getValor();
+        
         if (dinero >= precio) {
             vuelto = dinero - precio;
         } else {
