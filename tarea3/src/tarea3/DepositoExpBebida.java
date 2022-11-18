@@ -9,7 +9,7 @@ public class DepositoExpBebida extends JPanel {
     
     public DepositoExpBebida(Bebida b){
         
-        cant = 1;
+        cant = (b != null) ? 1 : 0;
         bebida = b;
         this.setPreferredSize(new Dimension(80, 40));        
         this.setBackground(Color.MAGENTA);
@@ -21,7 +21,7 @@ public class DepositoExpBebida extends JPanel {
         this.add(bebidaLabel);
     }
   
-    public Bebida GetBebida() throws NoHayBebidaException{
+    public Bebida getBebida() throws NoHayBebidaException {
         if(cant == 1){
             cant = 0;
             return bebida;
@@ -29,4 +29,18 @@ public class DepositoExpBebida extends JPanel {
         throw new NoHayBebidaException("No hay bebida");
     }
     
+    public void addBebida(Bebida b) throws Exception {
+        if(cant != 0) throw new Exception("at addBebida");
+        bebida = b;
+        cant = 1;
+    }
+    
+    @Override
+    public void paint(Graphics g) {
+        super.paint(g);
+        
+        if(this.bebida != null) {
+            bebida.paint(g);
+        }
+    }
 }

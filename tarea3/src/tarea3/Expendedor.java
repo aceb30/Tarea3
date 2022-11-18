@@ -91,19 +91,19 @@ public class Expendedor extends JPanel {
         
         //Buy buttons
         
-        buttonSprite.setBounds(700, 350, 30, 30);
+        buttonSprite.setBounds(650, 350, 50, 50);
         //botonBebida.addActionListener(this);
         buttonSprite.setText("S");
         buttonSprite.setFocusable(false);
         this.add(buttonSprite);
         
-        buttonCoca.setBounds(700, 400, 30, 30);
+        buttonCoca.setBounds(650, 400, 50, 50);
         //.addActionListener(this);
         buttonCoca.setText("C");
         button100.setFocusable(false);
         this.add(buttonCoca);
         
-        buttonFanta.setBounds(700, 450, 30, 30);
+        buttonFanta.setBounds(650, 450, 50, 50);
         //buttonFanta.addActionListener(this);
         buttonFanta.setText("F");
         buttonFanta.setFocusable(false);
@@ -171,7 +171,7 @@ public class Expendedor extends JPanel {
     }
 
     public Bebida getBebida() throws NoHayBebidaException {
-        return salida.GetBebida();
+        return salida.getBebida();
     }
 
     @Override
