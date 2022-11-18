@@ -22,6 +22,10 @@ public class Expendedor extends JPanel {
     private JButton button500 = new JButton();
     private JButton button1000 = new JButton();
     private JButton button1500 = new JButton();
+    
+    private JButton buttonSprite = new JButton();
+    private JButton buttonCoca = new JButton();
+    private JButton buttonFanta = new JButton();
 
     public Expendedor(int cant, int pre, int posx, int posy) {
         
@@ -51,10 +55,11 @@ public class Expendedor extends JPanel {
             //this.add(fanta);
         }                                               
         
-        monedas.setBounds(800, 100, 30, 40);
+        monedas.setBounds(800, 100, 30, 40);        
         this.add(monedas);
         
-        salida.setBounds(600,400,30,40);
+        salida.setBounds(650,875,30,40);
+        salida.setVisible(true);
         this.add(salida);
         
         depvuel.setBounds(0,0,750,150);
@@ -83,6 +88,26 @@ public class Expendedor extends JPanel {
         button1500.setText("Add 1500");
         button1500.setFocusable(false);
         this.add(button1500);
+        
+        //Buy buttons
+        
+        buttonSprite.setBounds(700, 350, 30, 30);
+        //botonBebida.addActionListener(this);
+        buttonSprite.setText("S");
+        buttonSprite.setFocusable(false);
+        this.add(buttonSprite);
+        
+        buttonCoca.setBounds(700, 400, 30, 30);
+        //.addActionListener(this);
+        buttonCoca.setText("C");
+        button100.setFocusable(false);
+        this.add(buttonCoca);
+        
+        buttonFanta.setBounds(700, 450, 30, 30);
+        //buttonFanta.addActionListener(this);
+        buttonFanta.setText("F");
+        buttonFanta.setFocusable(false);
+        this.add(buttonFanta);
         
         
     }
