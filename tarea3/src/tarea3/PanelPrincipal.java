@@ -21,7 +21,7 @@ public class PanelPrincipal extends JPanel {
         com = new Comprador(m3, 2, exp, 10, 10);
 
         this.add(exp, BorderLayout.EAST);
-        //this.add(com, BorderLayout.WEST);
+        this.add(com, BorderLayout.WEST);
     }
 
     @Override
