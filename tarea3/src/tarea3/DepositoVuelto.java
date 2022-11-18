@@ -11,7 +11,7 @@ public class DepositoVuelto extends JPanel {
     
         al = new ArrayList<Moneda>();
         
-        this.setPreferredSize(new Dimension(750,200)); 
+        this.setPreferredSize(new Dimension(750,150)); 
         this.setBackground(Color.BLACK);
         JLabel vueltoLabel = new JLabel();
         vueltoLabel.setText("Deposito de vuelto ");

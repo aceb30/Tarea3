@@ -17,12 +17,17 @@ public class Expendedor extends JPanel {
     private Bebida b;
     private int x;
     private int y;
+    
+    private JButton button100 = new JButton();
+    private JButton button500 = new JButton();
+    private JButton button1000 = new JButton();
+    private JButton button1500 = new JButton();
 
     public Expendedor(int cant, int pre, int posx, int posy) {
         
         super(null);
         this.setPreferredSize(new Dimension(750, 1000));
-        //this.setBackground(Color.BLUE);     
+        this.setBackground(Color.BLUE);     
         this.setLocale(null);
         
         x = posx;
@@ -52,8 +57,32 @@ public class Expendedor extends JPanel {
         salida.setBounds(600,400,30,40);
         this.add(salida);
         
-        depvuel.setBounds(0,0,750,200);
+        depvuel.setBounds(0,0,750,150);
         this.add(depvuel);
+        
+        button100.setBounds(10, 175, 100, 30);
+        //botonBebida.addActionListener(this);
+        button100.setText("Add 100");
+        button100.setFocusable(false);
+        this.add(button100);
+        
+        button500.setBounds(210, 175, 100, 30);
+        //botonBebida.addActionListener(this);
+        button500.setText("Add 500");
+        button500.setFocusable(false);
+        this.add(button500);
+        
+        button1000.setBounds(410, 175, 100, 30);
+        //botonBebida.addActionListener(this);
+        button1000.setText("Add 1000");
+        button1000.setFocusable(false);
+        this.add(button1000);
+        
+        button1500.setBounds(610, 175, 100, 30);
+        //botonBebida.addActionListener(this);
+        button1500.setText("Add 1500");
+        button1500.setFocusable(false);
+        this.add(button1500);
         
         
     }
@@ -126,7 +155,7 @@ public class Expendedor extends JPanel {
         
         super.paint(g);
         
-        /*g.setColor(Color.cyan);
+        g.setColor(Color.cyan);
         g.fillRect(200, 300, 400, 25);  // rec superiror
         g.fillRect(200, 300, 25, 600);  // rec Izquierdo
         g.fillRect(200, 800, 400, 150); // rec Inferior
