@@ -4,7 +4,7 @@ import java.awt.*;
 import javax.swing.*;
 
 public class Ventana extends JFrame {
-
+    
     public Ventana() throws NoHayBebidaException, PagoInsuficienteException, PagoIncorrectoException {
         super();
         this.setLayout(new BorderLayout());

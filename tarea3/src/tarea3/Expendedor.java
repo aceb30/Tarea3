@@ -1,10 +1,11 @@
 package tarea3;
 
 import java.awt.*;
+import java.awt.event.ActionListener;
 import javax.swing.*;
 
 public class Expendedor extends JPanel {
-
+   
     private DepositoMonedas monedas;
     private DepositoExpBebida salida;
     private Deposito coca;
@@ -38,6 +39,10 @@ public class Expendedor extends JPanel {
             sprite.addBebida(new Sprite(i + 200, 100, 100));
             coca.addBebida(new CocaCola(i + 100, 200, 200));
             fanta.addBebida(new Fanta(i + 100, 300, 300));
+            
+     
+         
+        
         }
         
         this.add(depvuel,BorderLayout.NORTH);
@@ -146,6 +151,10 @@ public class Expendedor extends JPanel {
         g.setColor(Color.black);
         g.fillRect(225,500 , 260, 10);
         g.fillRect(225,675 , 260, 10);
+        
+        coca.paintComponent(g);
+        sprite.paintComponent(g);
+        fanta.paintComponent(g);
 
     }
 }
