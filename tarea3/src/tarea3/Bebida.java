@@ -26,7 +26,8 @@ abstract public class Bebida extends JPanel{
     }
     public void paintComponent(Graphics g) {
       super.paintComponent(g);
-      
+      g.setColor(Color.white);
+      g.fillRect(x, y, 50, 50);
      
       
    }

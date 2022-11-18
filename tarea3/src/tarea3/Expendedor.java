@@ -161,6 +161,10 @@ public class Expendedor extends JPanel {
         g.setColor(Color.black);
         g.fillRect(225,500 , 260, 10);
         g.fillRect(225,675 , 260, 10);
+        
+        coca.paintComponent(g);
+        sprite.paintComponent(g);
+        fanta.paintComponent(g);
 
     }
 }

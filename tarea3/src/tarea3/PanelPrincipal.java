@@ -3,6 +3,8 @@ package tarea3;
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 import javax.swing.*;
 
 public class PanelPrincipal extends JPanel implements ActionListener {
@@ -50,9 +52,20 @@ public class PanelPrincipal extends JPanel implements ActionListener {
     }
 
     @Override
-    public void actionPerformed(ActionEvent e) {
+    public void actionPerformed(ActionEvent e)  {
         if(e.getSource()==botonBebida){
             System.out.println("Botón Bebida Presionado");
+            //For testing, weird code suggested by netporotos.
+            Moneda m4 = new Moneda1000();
+            try {
+                exp.comprarBebida(m4, 3);
+            } catch (NoHayBebidaException ex) {
+                Logger.getLogger(PanelPrincipal.class.getName()).log(Level.SEVERE, null, ex);
+            } catch (PagoInsuficienteException ex) {
+                Logger.getLogger(PanelPrincipal.class.getName()).log(Level.SEVERE, null, ex);
+            } catch (PagoIncorrectoException ex) {
+                Logger.getLogger(PanelPrincipal.class.getName()).log(Level.SEVERE, null, ex);
+            }
         }
     }
 
