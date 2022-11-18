@@ -7,6 +7,8 @@ abstract public class Bebida extends JPanel{
     private int x;
     private int y;
     public Bebida(int s, int posx, int posy) {
+        
+        this.setPreferredSize(new Dimension(20, 30));       
         serie = s;
         x = posx;
         y = posy;
@@ -26,7 +28,8 @@ abstract public class Bebida extends JPanel{
     }
     public void paintComponent(Graphics g) {
       super.paintComponent(g);
-      
+      g.setColor(Color.white);
+      g.fillRect(x, y, 50, 50);
      
       
    }

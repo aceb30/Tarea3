@@ -10,11 +10,21 @@ public class Comprador extends JPanel {
     private int vuelto = 0;
     private int x;
     private int y;
+    
+    private JButton botonBebida = new JButton();
 
-    public Comprador(Moneda m, int cualBebida, Expendedor exp, int posx, int posy) throws NoHayBebidaException, PagoInsuficienteException, PagoIncorrectoException {
-this.setPreferredSize(new Dimension(750, 800));
-        x = posx;
-        y = posy;
+    public Comprador(Moneda m, int cualBebida, Expendedor exp) throws NoHayBebidaException, PagoInsuficienteException, PagoIncorrectoException {
+        
+        super(null);
+        this.setLocale(null);
+        this.setPreferredSize(new Dimension(750,500));                
+        this.setBackground(Color.MAGENTA);
+        
+        botonBebida.setBounds(10, 10, 100, 50);
+        //botonBebida.addActionListener(this);
+        botonBebida.setText("Bebida");
+        botonBebida.setFocusable(false);
+        
         exp.comprarBebida(m, cualBebida);
         Bebida b = exp.getBebida();
         vuelto = 0;
@@ -27,7 +37,18 @@ this.setPreferredSize(new Dimension(750, 800));
                 break;
             }
         }
-        sabor = b.beber();
+        sabor = b.beber();                                               
+                        
+        JLabel compradorLabel = new JLabel();
+        ImageIcon stickman = new ImageIcon("stickman3.png");
+        compradorLabel.setIcon(stickman);
+        compradorLabel.setText("Comprador (Is a programer)");        
+        compradorLabel.setForeground(Color.WHITE);
+        compradorLabel.setVisible(true);                
+        compradorLabel.setBounds(200,500, 400, 300);
+                
+       this.add(compradorLabel);                      
+                        
     }
 
     public int getVuelto() {
@@ -40,23 +61,8 @@ this.setPreferredSize(new Dimension(750, 800));
 
     @Override
     public void paint(Graphics g) {
-        super.paint(g);
         
-        g.setColor(Color.YELLOW);
-        g.fillOval(10, 10, 200, 200);
-
-        // draw Eyes
-        g.setColor(Color.BLACK);
-        g.fillOval(55, 65, 30, 30);
-        g.fillOval(135, 65, 30, 30);
-
-        // draw Mouth
-        g.fillOval(50, 110, 120, 60);
-
-        // adding smile
-        g.setColor(Color.YELLOW);
-        g.fillRect(50, 110, 120, 30);
-        g.fillOval(50, 120, 120, 40);
-    }
+        super.paint(g);                                     
+    }    
 
 }

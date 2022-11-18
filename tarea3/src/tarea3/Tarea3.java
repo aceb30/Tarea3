@@ -25,27 +25,19 @@ public class Tarea3 {
         v.add(p);
         v.setVisible(true);
         
-        /*
-        Moneda m1 = new Moneda100();
+        
+        /*Moneda m1 = new Moneda100();
         Moneda m2 = new Moneda500();
         Moneda m3 = new Moneda1000();
-        Moneda n = null;
+        Moneda n = null;                                                
         
-        PanelPrincipal p = new PanelPrincipal();
-        Expendedor exp = new Expendedor(10, 1000, 10, 10);
-        Comprador com = new Comprador(m3, 2, exp, 10, 10);
-        
-        
-        v.add(p);
-        v.add(exp);
-        v.add(com);
-        */
-        /*
         Expendedor expendedor = new Expendedor(1, 800, 10, 10);
+        expendedor.AddVuelto(m1);
 
         Comprador pedro;
         try {
-            pedro = new Comprador(m3, 2, expendedor, 10, 10);
+            
+            pedro = new Comprador(m3, 2, expendedor);
 
             System.out.println(pedro.getVuelto());
             System.out.println(pedro.getSabor());
@@ -53,7 +45,7 @@ public class Tarea3 {
         } catch (Exception e) {
             System.out.println(e);
         }
-*/
+        */
     }
 
 }
