@@ -6,7 +6,7 @@ import javax.swing.*;
 abstract public class Moneda extends JPanel{
 
     public Moneda() {
-        this.setPreferredSize(new Dimension(50, 50));        
+        this.setPreferredSize(new Dimension(60, 50));        
     }
 
     public String getSerie() {

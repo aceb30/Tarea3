@@ -12,7 +12,7 @@ public class DepositoVuelto extends JPanel {
         al = new ArrayList<Moneda>();
         
         this.setPreferredSize(new Dimension(750, 200));
-        this.setBackground(Color.BLACK);                      
+        this.setBackground(Color.GREEN);                      
     
     }
 

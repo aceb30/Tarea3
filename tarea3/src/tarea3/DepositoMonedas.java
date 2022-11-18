@@ -16,7 +16,7 @@ public class DepositoMonedas extends JPanel {
         JLabel vueltoLabel = new JLabel();
         vueltoLabel.setText("Vuelto");
         vueltoLabel.setVisible(true);
-        vueltoLabel.setForeground(Color.black);        
+        vueltoLabel.setForeground(Color.GREEN);        
         this.add(vueltoLabel);
                    
      }

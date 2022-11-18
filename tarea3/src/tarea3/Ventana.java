@@ -11,5 +11,6 @@ public class Ventana extends JFrame {
         this.setTitle("Tarea 3");
         this.setSize(1500, 1000);
         this.setDefaultCloseOperation(EXIT_ON_CLOSE);
+        //this.setLocale(null);
     }
 }

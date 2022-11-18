@@ -5,6 +5,7 @@ class Sprite extends Bebida {
 
     public Sprite(int serie, int posx, int posy) {
         super(serie, posx, posy);
+
     }
 
     public String beber() {

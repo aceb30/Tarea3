@@ -59,16 +59,15 @@ public class PanelPrincipal extends JPanel implements ActionListener {
         exp.AddVuelto(m12);
         exp.AddVuelto(m13);
         exp.AddVuelto(m14);
-        com = new Comprador(m90, 2, exp);
-
-
-        com = new Comprador(m3, 2, exp);
+        com = new Comprador(m90, 2, exp);      
         
+        //botonBebida.setMaximumSize(new Dimension(40, 40));
         this.add(botonBebida);
         
-
+        //com.setBounds(0, 0, 300, 200);
         this.add(exp,BorderLayout.EAST);
         this.add(com,BorderLayout.WEST);
+        //this.add(com);
         
         
         

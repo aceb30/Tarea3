@@ -15,9 +15,10 @@ class Moneda100 extends Moneda{
         panel.setForeground(Color.WHITE);
         panel.setIcon(coin);
         panel.setVisible(true);
-        this.setBackground(Color.BLACK);         
-        this.add(panel);
+        this.setBackground(Color.BLACK);                 
         panel.setFont(new Font("Serif", Font.PLAIN, 7));
+        //panel.setHorizontalAlignment(SwingConstants.CENTER);
+        this.add(panel);
     }
 
     @Override

@@ -14,6 +14,10 @@ public class Comprador extends JPanel {
     public Comprador(Moneda m, int cualBebida, Expendedor exp) throws NoHayBebidaException, PagoInsuficienteException, PagoIncorrectoException {
         
         this.setPreferredSize(new Dimension(750,500));
+        //this.setSize(250,500);
+        //this.setBounds(0, 0, 750, 500);
+        this.setBackground(Color.MAGENTA);
+        this.setLocale(null);
         
         exp.comprarBebida(m, cualBebida);
         Bebida b = exp.getBebida();
@@ -29,23 +33,40 @@ public class Comprador extends JPanel {
         }
         sabor = b.beber();
         
-        this.setBackground(Color.MAGENTA);
-        //this.setLocale(null);
+       
         
         JPanel panel = new JPanel();
-        panel.setBounds(30, 30, 400, 300);
+        panel.setPreferredSize(new Dimension(750, 400));
         panel.setBackground(Color.red);
+        panel.setVisible(true);
+        this.add(panel,BorderLayout.NORTH);
         
-        ImageIcon stickman = new ImageIcon("stickman.png");        
-        JLabel compradorLabel = new JLabel();  
-        compradorLabel.setBackground(Color.red);
-        compradorLabel.setVisible(true);
+        JPanel panel2 = new JPanel();
+        panel2.setPreferredSize(new Dimension(350, 500));
+        panel2.setBackground(Color.YELLOW);
+        panel2.setVisible(true);
+        this.add(panel2,BorderLayout.WEST);
+                        
+        JLabel compradorLabel = new JLabel();
+        ImageIcon stickman = new ImageIcon("stickman.png");
+        compradorLabel.setPreferredSize(new Dimension(350, 200));  
+        compradorLabel.setBackground(Color.YELLOW);
         compradorLabel.setText("Comprador");
-        compradorLabel.setForeground(Color.black);
+        compradorLabel.setVisible(true);        
+        compradorLabel.setForeground(Color.GREEN);
         compradorLabel.setIcon(stickman);
-        compradorLabel.setBounds(100,100,100,100);
+        this.add(compradorLabel,BorderLayout.EAST);
         
-        this.add(compradorLabel);
+        
+        //compradorLabel.setBounds(100,100,100,100);
+        
+        /*JLabel divisor = new JLabel();
+        divisor.setBackground(Color.red);                
+        divisor.setVisible(true);
+        divisor.setSize(new Dimension(750, 200));
+        this.add(divisor,BorderLayout.NORTH);
+
+        this.add(compradorLabel);*/
                         
     }
 

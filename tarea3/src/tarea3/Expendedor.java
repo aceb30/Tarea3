@@ -22,7 +22,7 @@ public class Expendedor extends JPanel {
         
         this.setPreferredSize(new Dimension(750, 600));
         this.setBackground(Color.BLUE);     
-        //this.setLocale(null);
+        this.setLocale(null);
         
         x = posx;
         y = posy;
@@ -34,22 +34,59 @@ public class Expendedor extends JPanel {
         depvuel = new DepositoVuelto();
         monedas = new DepositoMonedas();
         salida = new DepositoExpBebida(null);
+                                
         for (int i = 0; i < cant; ++i) {
             //Por ahora les tire posiciones xy random pero se deberá modificar.
             sprite.addBebida(new Sprite(i + 200, 100, 100));
             coca.addBebida(new CocaCola(i + 100, 200, 200));
             fanta.addBebida(new Fanta(i + 100, 300, 300));
-            
-     
-         
-        
-        }
-        
+            //this.add(coca);
+            //this.add(sprite);
+            //this.add(fanta);
+        }        
         this.add(depvuel,BorderLayout.NORTH);
         
-        this.add(monedas,BorderLayout.NORTH);
+        JPanel panel2 = new JPanel();
+        panel2.setPreferredSize(new Dimension(750, 120));
+        panel2.setBackground(Color.YELLOW);
+        panel2.setVisible(true);
+        this.add(panel2,BorderLayout.NORTH);
+        
+        JPanel panel3 = new JPanel();
+        panel3.setPreferredSize(new Dimension(235, 120));
+        panel3.setBackground(Color.ORANGE);
+        panel3.setVisible(true);
+        this.add(panel3,BorderLayout.WEST);
+        
+        JPanel panel4 = new JPanel();
+        panel4.setPreferredSize(new Dimension(260, 120));
+        panel4.setBackground(Color.BLACK);
+        panel4.setVisible(true);
+        this.add(panel4,BorderLayout.EAST);
+        
+        JPanel panel5 = new JPanel();
+        panel5.setPreferredSize(new Dimension(260, 120));
+        panel5.setBackground(Color.cyan);
+        panel5.setVisible(true);
+        this.add(panel5,BorderLayout.NORTH);
+        
+        /*JPanel panel6 = new JPanel();
+        panel6.setPreferredSize(new Dimension(260, 120));
+        panel6.setBackground(Color.BLACK);
+        panel6.setVisible(true);
+        this.add(panel6,BorderLayout.NORTH);*/
+        
+        JPanel panel7 = new JPanel();
+        panel7.setPreferredSize(new Dimension(235, 120));
+        panel7.setBackground(Color.WHITE);
+        panel7.setVisible(true);
+        this.add(panel5,BorderLayout.EAST);
+        
+        this.add(monedas,BorderLayout.EAST);
                         
-        this.add(salida);                           
+        this.add(salida,BorderLayout.EAST);
+        
+        
     }
 
     public Moneda getVuelto() {
@@ -120,7 +157,7 @@ public class Expendedor extends JPanel {
         
         super.paint(g);
         
-        g.setColor(Color.cyan);
+        /*g.setColor(Color.cyan);
         g.fillRect(200, 300, 400, 25);  // rec superiror
         g.fillRect(200, 300, 25, 600);  // rec Izquierdo
         g.fillRect(200, 800, 400, 150); // rec Inferior
@@ -154,7 +191,7 @@ public class Expendedor extends JPanel {
         
         coca.paintComponent(g);
         sprite.paintComponent(g);
-        fanta.paintComponent(g);
+        fanta.paintComponent(g);*/
 
     }
 }
