@@ -42,7 +42,7 @@ public class Comprador extends JPanel {
         JLabel compradorLabel = new JLabel();
         ImageIcon stickman = new ImageIcon("stickman3.png");
         compradorLabel.setIcon(stickman);
-        compradorLabel.setText("Comprador (Is a programer)");        
+        compradorLabel.setText("Comprador (they are a programmer)");        
         compradorLabel.setForeground(Color.WHITE);
         compradorLabel.setVisible(true);                
         compradorLabel.setBounds(200,500, 400, 300);

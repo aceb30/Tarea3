@@ -12,8 +12,8 @@ class Sprite extends Bebida {
         return super.beber() + "sprite";
     }
     @Override
-    public void paintComponent(Graphics g){
-        super.paintComponent(g);
+    public void paint(Graphics g){
+        super.paint(g);
         g.setColor(Color.white);
         g.fillRect(super.getX(), super.getY(), 50, 50);
     }

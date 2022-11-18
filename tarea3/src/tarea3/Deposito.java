@@ -9,8 +9,8 @@ public class Deposito extends JPanel {
     
     private ArrayList<Bebida> al;
     
-    public void paintComponent(Graphics g){
-        al.get(0).paintComponent(g); //Se supone que aquí irá un for para dibujar cada bebida del depósito
+    public void paint(Graphics g){
+        al.get(0).paint(g); //Se supone que aquí irá un for para dibujar cada bebida del depósito
     }
     public Deposito(){                        
         
