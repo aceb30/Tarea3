@@ -5,10 +5,10 @@ import javax.swing.*;
 
 abstract public class Bebida extends JPanel {
     private int serie;
+    protected JButton btn;
 
     public Bebida(int s, int posx, int posy) {
-
-        this.setPreferredSize(new Dimension(20, 30));
+        super(null);
         serie = s;
         this.setLocation(posx, posy);
     }

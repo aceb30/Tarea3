@@ -46,13 +46,9 @@ public class Expendedor extends JPanel {
         salida = new DepositoExpBebida(null);
                                 
         for (int i = 0; i < cant; ++i) {
-            //Por ahora les tire posiciones xy random pero se deberá modificar.
-            sprite.addBebida(new Sprite(i + 200, 100, 100));
-            coca.addBebida(new CocaCola(i + 100, 200, 200));
-            fanta.addBebida(new Fanta(i + 100, 300, 300));
-            //this.add(coca);
-            //this.add(sprite);
-            //this.add(fanta);
+            //sprite.addBebida(new Sprite(i + 200, 100, 100));
+            coca.addBebida(new CocaCola(i + 100, 0, 0));
+            //fanta.addBebida(new Fanta(i + 100, 300, 300));
         }                                               
         
         monedas.setBounds(800, 100, 30, 40);        
@@ -109,7 +105,10 @@ public class Expendedor extends JPanel {
         buttonFanta.setFocusable(false);
         this.add(buttonFanta);
         
-        
+        coca.validate();
+        this.add(coca);
+        this.revalidate();
+        this.repaint();
     }
 
     public Moneda getVuelto() {
@@ -212,9 +211,6 @@ public class Expendedor extends JPanel {
         g.fillRect(225,500 , 260, 10);
         g.fillRect(225,675 , 260, 10);
         
-        //coca.paintComponent(g);
-        //sprite.paintComponent(g);
-        //fanta.paintComponent(g);*/
 
     }
 }

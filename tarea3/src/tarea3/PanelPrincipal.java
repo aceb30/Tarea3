@@ -47,7 +47,7 @@ public class PanelPrincipal extends JPanel implements ActionListener {
         Moneda m90 = new Moneda1000();
         Moneda n = null;
         
-        exp = new Expendedor(10, 1000, 10, 10);
+        exp = new Expendedor(1, 1000, 10, 10);
 
         exp.AddVuelto(m1);
         exp.AddVuelto(m2);
@@ -71,9 +71,8 @@ public class PanelPrincipal extends JPanel implements ActionListener {
         this.add(com);
         this.add(exp,BorderLayout.EAST);                                                 
         
-        this.revalidate();
-        this.repaint();
-        
+        this.exp.revalidate();
+        this.exp.repaint();
     }
 
     @Override
@@ -97,6 +96,9 @@ public class PanelPrincipal extends JPanel implements ActionListener {
                 Logger.getLogger(PanelPrincipal.class.getName()).log(Level.SEVERE, null, ex);
             }
         }
+        else {
+            System.out.println("unhandled btn press: " + e.toString());
+        }
     }
 
-}
+}   

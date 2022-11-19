@@ -10,25 +10,25 @@ public class Comprador extends JPanel {
     private int vuelto = 0;
     private int x;
     private int y;
-    
+
     private JButton botonBebida = new JButton();
 
     public Comprador(Moneda m, int cualBebida, Expendedor exp) throws NoHayBebidaException, PagoInsuficienteException, PagoIncorrectoException {
-        
+
         super(null);
         this.setLocale(null);
-        this.setPreferredSize(new Dimension(750,500));                
+        this.setPreferredSize(new Dimension(750, 500));
         this.setBackground(Color.MAGENTA);
-        
+
         botonBebida.setBounds(10, 10, 100, 50);
         //botonBebida.addActionListener(this);
         botonBebida.setText("Bebida");
         botonBebida.setFocusable(false);
-        
-        exp.comprarBebida(m, cualBebida);
-        Bebida b = exp.getBebida();
-        vuelto = 0;
 
+        //exp.comprarBebida(m, cualBebida);
+        //Bebida b = exp.getBebida();
+        vuelto = 0;
+        /*
         while (true) {
             if (exp.getSizea() != 0) {
                 Moneda v = exp.getVuelto();
@@ -37,18 +37,18 @@ public class Comprador extends JPanel {
                 break;
             }
         }
-        sabor = b.beber();                                               
-                        
+        sabor = b.beber(); */
+
         JLabel compradorLabel = new JLabel();
         ImageIcon stickman = new ImageIcon("stickman3.png");
         compradorLabel.setIcon(stickman);
-        compradorLabel.setText("Comprador (they are a programmer)");        
+        compradorLabel.setText("Comprador (they are a programmer)");
         compradorLabel.setForeground(Color.WHITE);
-        compradorLabel.setVisible(true);                
-        compradorLabel.setBounds(200,500, 400, 300);
-                
-       this.add(compradorLabel);                      
-                        
+        compradorLabel.setVisible(true);
+        compradorLabel.setBounds(200, 500, 400, 300);
+
+        this.add(compradorLabel);
+
     }
 
     public int getVuelto() {
@@ -61,8 +61,8 @@ public class Comprador extends JPanel {
 
     @Override
     public void paint(Graphics g) {
-        
-        super.paint(g);                                     
-    }    
+
+        super.paint(g);
+    }
 
 }
