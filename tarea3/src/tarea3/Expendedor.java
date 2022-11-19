@@ -17,6 +17,7 @@ public class Expendedor extends JPanel {
     private Bebida b;
     private int x;
     private int y;
+    private int posCoca = 200;
     
     private JButton button100 = new JButton();
     private JButton button500 = new JButton();
@@ -36,6 +37,7 @@ public class Expendedor extends JPanel {
         
         x = posx;
         y = posy;
+        
         vuelto = 0;
         precio = pre;
         coca = new Deposito();
@@ -50,7 +52,9 @@ public class Expendedor extends JPanel {
             sprite.addBebida(new Sprite(i + 200, 100, 100));
             coca.addBebida(new CocaCola(i + 100, 200, 200));
             fanta.addBebida(new Fanta(i + 100, 300, 300));
-            //this.add(coca);
+            coca.setBounds(100,posCoca, 40, 60);
+            posCoca=posCoca+50;
+            this.add(coca);
             //this.add(sprite);
             //this.add(fanta);
         }                                               

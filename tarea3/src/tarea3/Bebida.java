@@ -8,7 +8,7 @@ abstract public class Bebida extends JPanel {
 
     public Bebida(int s, int posx, int posy) {
 
-        this.setPreferredSize(new Dimension(20, 30));
+        this.setPreferredSize(new Dimension(20, 50));
         serie = s;
         this.setLocation(posx, posy);
     }
