@@ -15,6 +15,6 @@ class Sprite extends Bebida {
     public void paint(Graphics g){
         super.paint(g);
         g.setColor(Color.white);
-        g.fillRect(super.getX(), super.getY(), 50, 50);
+        g.fillRect(super.getX(), super.getY(), 20, 50);
     }
 }
