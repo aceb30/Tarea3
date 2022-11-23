@@ -7,15 +7,15 @@ class CocaCola extends Bebida{
     
     public CocaCola(int serie, int posx, int posy){
         super(serie, posx, posy);        
-        this.btn = new JButton();
+        //this.btn = new JButton();
         
         ImageIcon coca = new ImageIcon("cocacola.png");
         //JLabel panel = new JLabel();    
         
-        this.btn.setIcon(coca);
-        this.btn.setBounds(0, 0, 20, 50);
+        //this.btn.setIcon(coca);
+        //this.btn.setBounds(0, 0, 20, 50);
 
-        this.add(this.btn);      
+        //this.add(this.btn);      
     }
     @Override
     public String beber(){
